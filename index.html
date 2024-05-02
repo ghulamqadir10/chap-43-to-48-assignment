@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chap 43-48 Assignment</title>
+    <style>
+        body {
+            /* background-color: greenyellow; */
+            background-image: url(./background.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+
+        }
+
+        .pics {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+            padding: 10px;
+
+            /* mix-blend-mode: url("./infinix.jpg") multiply; */
+        }
+
+        .pics img {
+            mix-blend-mode: multiply;
+            width: 200px;
+            height: 200px;
+        }
+
+        #showalert {
+            font-size: larger;
+            width: 100%;
+            height: 80px;
+            color: green;
+            border: 4px solid green;
+            /* margin: 100px auto; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #showalert:active {
+            color: red;
+            border-color: red;
+        }
+
+        .changingphotos {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+            padding: 10px;
+        }
+
+        .changingphotos img {
+            width: 200px;
+            height: 200px;
+        }
+
+        #counter {
+            font-size: 100px;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            color: navy;
+        }
+
+        #buttonstocenter {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+        }
+
+        #buttonstocenter #inc,
+        #dec {
+            width: 200px;
+            height: 70px;
+            border: 10px solid navy;
+            color: navy;
+        }
+
+        table {
+            /* border: 10px solid black; */
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        table h1 {}
+
+        table thead {
+            padding: 40px;
+            border: 2px solid black;
+        }
+
+        table td {
+            border: 2px solid black;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            background-color: lightblue;
+        }
+
+        table th {
+            border: 2px solid black;
+            /* border-collapse: collapse; */
+            width: 100px;
+            font-size: larger;
+            text-align: center;
+            height: 80px;
+        }
+
+        table td button {
+            width: 100px;
+            height: 40px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Question no 1 -->
+    <button id="showalert">Click ME</button>
+
+    <!-- Question no 2 -->
+    <h1>phone Look up</h1>
+    <div class="pics">
+        <img src="./infinix.jpg" alt="descrption of pic" onclick="buymob()">
+        <img src="./iphone.jpg" alt="descrption of pic" onclick="alert('thanks for purchasing iphone from us')">
+        <img src="./levant-galaxy-note10-plus-n975-sm-n975fzsdmid-backauraglow-thumb-182079707.png"
+            alt="descrption of pic" onclick="alert('thanks for purchasing samsung from us')">
+        <img src="./vivo backview.jpg" alt="descrption of pic" onclick="alert('thanks for purchasing vivo from us')">
+    </div>
+
+
+    <!--Question no 3-->
+
+    <!--  -->
+    <table id="input">
+        <h1>Delete Button</h1>
+        <thead>
+
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Roll no</th>
+                <th>Button</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Question  no 4 -->
+    <!-- simplest method -->
+
+    <!--<img src="./infinix.jpg" alt="infinix" onmouseover="src='./vivo backview.jpg'" onmouseout="src='./infinix.jpg'"
+        width="200px" height="200px"> -->
+    <!-- ya sabsa simple and asna method hai html ma hai bn jata hai -->
+
+    <!-- another method  -->
+    <h1>Pictures changing by clicking</h1>
+    <div class="changingphotos">
+        <img src="1.jpg" alt="scenes" onmouseover="swap_image(this,1)" onmouseout="swap_image(this,2)">
+        <!--(this) jo hai wo pura element ko uthayaga apna sath jo use kr sakta hain js ka function ma-->
+        <img src="3.jpg" alt="scenes" onmouseover="swap_image1(this,1)" onmouseout="swap_image1(this,2)">
+        <img src="7.jpg" alt="scenes" onmouseover="swap_image2(this,1)" onmouseout="swap_image2(this,2)">
+        <img src="9.jpg" alt="scenes" onmouseover="swap_image3(this,1)" onmouseout="swap_image3(this,2)">
+    </div>
+
+    <!-- Question no 5 -->
+
+    <div id="counter">0</div>
+    <div id="buttonstocenter">
+        <button id="inc">Increase</button>
+        <button id="dec">Decrease</button>
+    </div>
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
